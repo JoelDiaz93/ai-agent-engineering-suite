@@ -1,0 +1,16 @@
+[project]
+name = "ai-agent-engineering-suite"
+version = "0.1.0"
+description = "Portfolio-ready AI engineering labs and applications"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+ai = ["langchain>=0.3", "langgraph>=0.2", "langchain-openai>=0.2"]
+api = ["fastapi>=0.115", "uvicorn>=0.30", "pydantic>=2.8"]
+ui = ["streamlit>=1.38"]
+test = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths=["tests"]
+pythonpath=["."]
